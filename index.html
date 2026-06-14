@@ -1292,6 +1292,16 @@ p strong { color: var(--cream); }
     <div class="promo-code">LP&SPADES</div>
     <div class="promo-note">Use this code to invite your guests at 50% off</div>
   </div>
+
+  <div class="sec-divider"></div>
+  <div class="sec-label">Guest List</div>
+  <div class="sec-heading">Your Invites</div>
+  <div class="guest-block">
+    <div class="guest-count">10</div>
+    <div class="guest-count-label">Guest Invites — Love, Peace & Spades</div>
+    <p class="guest-note">The LP&S team can invite up to 10 guests. Submit your list using the button below.</p>
+    <button class="btn-primary" onclick="openGuestModal('spades')">Submit Your Guest List →</button>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════════ -->
@@ -1927,6 +1937,39 @@ p strong { color: var(--cream); }
 <!-- GUEST LIST MODALS -->
 <!-- ═══════════════════════════════════════════ -->
 
+<!-- LOVE PEACE & SPADES — 10 guests -->
+<div class="modal-overlay" id="guestModal-spades">
+  <div class="modal">
+    <button class="modal-x" onclick="closeGuestModal('spades')">×</button>
+    <div class="modal-form-wrap" id="guestForm-spades">
+      <div class="modal-eyebrow">Wed June 17th · Guest List</div>
+      <h2 class="modal-title">Love, Peace & Spades Academy</h2>
+      <p class="modal-sub">LP&S gets up to 10 guests. Enter your name then your guests below.</p>
+      <div class="modal-field">
+        <label>Your Name</label>
+        <input type="text" id="spades-collab" placeholder="Your full name">
+      </div>
+      <div class="modal-events-label" style="margin-bottom:10px;">Your Guest List</div>
+      <div class="modal-field"><label>Guest 1</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <div class="modal-field"><label>Guest 2</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <div class="modal-field"><label>Guest 3</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <div class="modal-field"><label>Guest 4</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <div class="modal-field"><label>Guest 5</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <div class="modal-field"><label>Guest 6</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <div class="modal-field"><label>Guest 7</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <div class="modal-field"><label>Guest 8</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <div class="modal-field"><label>Guest 9</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <div class="modal-field"><label>Guest 10</label><input type="text" class="spades-guest" placeholder="Full name"></div>
+      <button class="btn-modal-submit" onclick="submitGuestList('spades')">Submit My Guest List →</button>
+    </div>
+    <div class="modal-success" id="guestSuccess-spades">
+      <div class="modal-success-icon">🖤</div>
+      <h3>Guest list submitted.</h3>
+      <p>We've got your people. See you Wednesday. 🏡</p>
+    </div>
+  </div>
+</div>
+
 <!-- EROTIC COLORING + POETRY — 5 guests, ask who they are -->
 <div class="modal-overlay" id="guestModal-erotic">
   <div class="modal">
@@ -2098,6 +2141,7 @@ document.querySelectorAll('.modal-overlay').forEach(overlay => {
 
 // Event display names for the webhook payload
 const eventNames = {
+  spades:   'Love, Peace & Spades Academy — Wed June 17',
   erotic:   'Erotic Coloring + Poetry After Dark — Tue June 16',
   bound:    'Bound & Leathered: Popup Bookstore — Thu June 18',
   dayoff:   'Day Off — Fri June 19',
