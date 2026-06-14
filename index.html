@@ -979,6 +979,97 @@ p {
 }
 p strong { color: var(--cream); }
 
+/* INVITATION CARD */
+.invite-card {
+  background: var(--cream);
+  color: var(--forest-d);
+  margin: 20px auto 0;
+  padding: 36px 28px;
+  max-width: 340px;
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--cream-d);
+}
+
+.invite-card::before,
+.invite-card::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange), var(--amber), var(--orange));
+  margin: 0 -28px;
+}
+.invite-card::before { margin-bottom: 28px; }
+.invite-card::after { margin-top: 28px; }
+
+.invite-oh {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 6px;
+}
+
+.invite-presents {
+  font-family: 'Gloock', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--forest);
+  opacity: 0.6;
+  margin-bottom: 14px;
+}
+
+.invite-title {
+  font-family: 'Gloock', serif;
+  font-size: 26px;
+  color: var(--forest-d);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.invite-date {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--orange);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.invite-divider {
+  height: 1px;
+  background: rgba(8,31,20,0.12);
+  margin: 18px 0;
+}
+
+.invite-detail {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--forest);
+  opacity: 0.75;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.invite-icon { margin-right: 6px; }
+
+.invite-guestlist {
+  font-family: 'Gloock', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--forest-d);
+  line-height: 1.65;
+}
+
+@media (max-width: 640px) {
+  .invite-card { max-width: 100%; padding: 28px 20px; }
+  .invite-card::before, .invite-card::after { margin: 0 -20px; }
+}
+
+/* GENERAL */
 @media (max-width: 640px) {
   .schedule-row { grid-template-columns: 88px 1fr; gap: 10px; padding: 12px 14px; }
   .schedule-row .sched-who { grid-column: 1 / -1; }
@@ -1965,7 +2056,20 @@ p strong { color: var(--cream); }
     <div class="modal-success" id="guestSuccess-spades">
       <div class="modal-success-icon">🖤</div>
       <h3>Guest list submitted.</h3>
-      <p>We've got your people. See you Wednesday. 🏡</p>
+      <p>Screenshot the invitation below and send it to your guests.</p>
+      <div class="invite-card">
+        <div class="invite-oh">Our House on 48th</div>
+        <div class="invite-presents">cordially invites you to</div>
+        <div class="invite-title">Love, Peace<br>& Spades Academy</div>
+        <div class="invite-date">Wednesday, June 17th</div>
+        <div class="invite-divider"></div>
+        <div class="invite-detail"><span class="invite-icon">🕕</span> Doors at 6:00 PM · Ends at 10:00 PM</div>
+        <div class="invite-detail"><span class="invite-icon">📍</span> 1956 W 48th Street, Los Angeles</div>
+        <div class="invite-detail"><span class="invite-icon">👟</span> Shoes off at the door</div>
+        <div class="invite-detail"><span class="invite-icon">✨</span> Come as you are</div>
+        <div class="invite-divider"></div>
+        <div class="invite-guestlist">Your name will be on the guest list.<br>No ticket needed — just show up.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -1993,7 +2097,20 @@ p strong { color: var(--cream); }
     <div class="modal-success" id="guestSuccess-erotic">
       <div class="modal-success-icon">🖤</div>
       <h3>Guest list submitted.</h3>
-      <p>We've got your people. See you Tuesday. 🏡</p>
+      <p>Screenshot the invitation below and send it to your guests.</p>
+      <div class="invite-card">
+        <div class="invite-oh">Our House on 48th</div>
+        <div class="invite-presents">cordially invites you to</div>
+        <div class="invite-title">Erotic Coloring<br>+ Poetry After Dark</div>
+        <div class="invite-date">Tuesday, June 16th</div>
+        <div class="invite-divider"></div>
+        <div class="invite-detail"><span class="invite-icon">🕕</span> Doors at 6:30 PM · Coloring at 7:15 PM · Poetry at 8:30 PM</div>
+        <div class="invite-detail"><span class="invite-icon">📍</span> 1956 W 48th Street, Los Angeles</div>
+        <div class="invite-detail"><span class="invite-icon">👟</span> Shoes off at the door</div>
+        <div class="invite-detail"><span class="invite-icon">✨</span> Come as you are</div>
+        <div class="invite-divider"></div>
+        <div class="invite-guestlist">Your name will be on the guest list.<br>No ticket needed — just show up.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2019,7 +2136,20 @@ p strong { color: var(--cream); }
     <div class="modal-success" id="guestSuccess-bound">
       <div class="modal-success-icon">🖤</div>
       <h3>Guest list submitted.</h3>
-      <p>We've got your people. See you Thursday. 🏡</p>
+      <p>Screenshot the invitation below and send it to your guests.</p>
+      <div class="invite-card">
+        <div class="invite-oh">Our House on 48th</div>
+        <div class="invite-presents">cordially invites you to</div>
+        <div class="invite-title">Bound & Leathered:<br>Popup Bookstore</div>
+        <div class="invite-date">Thursday, June 18th</div>
+        <div class="invite-divider"></div>
+        <div class="invite-detail"><span class="invite-icon">🕕</span> Doors at 6:30 PM · Ends at 10:00 PM</div>
+        <div class="invite-detail"><span class="invite-icon">📍</span> 1956 W 48th Street, Los Angeles</div>
+        <div class="invite-detail"><span class="invite-icon">👟</span> Shoes off at the door</div>
+        <div class="invite-detail"><span class="invite-icon">✨</span> Come as you are</div>
+        <div class="invite-divider"></div>
+        <div class="invite-guestlist">Your name will be on the guest list.<br>No ticket needed — just show up.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2045,7 +2175,20 @@ p strong { color: var(--cream); }
     <div class="modal-success" id="guestSuccess-dayoff">
       <div class="modal-success-icon">🖤</div>
       <h3>Guest list submitted.</h3>
-      <p>We've got your people. See you Friday. 🏡</p>
+      <p>Screenshot the invitation below and send it to your guests.</p>
+      <div class="invite-card">
+        <div class="invite-oh">Our House on 48th</div>
+        <div class="invite-presents">cordially invites you to</div>
+        <div class="invite-title">Day Off</div>
+        <div class="invite-date">Friday, June 19th — Juneteenth</div>
+        <div class="invite-divider"></div>
+        <div class="invite-detail"><span class="invite-icon">🕕</span> 11:00 AM – 5:00 PM</div>
+        <div class="invite-detail"><span class="invite-icon">📍</span> 1956 W 48th Street, Los Angeles</div>
+        <div class="invite-detail"><span class="invite-icon">👟</span> Shoes off at the door</div>
+        <div class="invite-detail"><span class="invite-icon">✨</span> Come as you are</div>
+        <div class="invite-divider"></div>
+        <div class="invite-guestlist">Your name will be on the guest list.<br>No ticket needed — just show up.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2078,7 +2221,20 @@ p strong { color: var(--cream); }
     <div class="modal-success" id="guestSuccess-homebody">
       <div class="modal-success-icon">🖤</div>
       <h3>Guest list submitted.</h3>
-      <p>We've got your people. This is your night. 🏡</p>
+      <p>Screenshot the invitation below and send it to your guests.</p>
+      <div class="invite-card">
+        <div class="invite-oh">Our House on 48th</div>
+        <div class="invite-presents">cordially invites you to</div>
+        <div class="invite-title">Homebody<br>Art Exhibit by K3s1</div>
+        <div class="invite-date">Saturday, June 20th</div>
+        <div class="invite-divider"></div>
+        <div class="invite-detail"><span class="invite-icon">🕕</span> Doors at 6:30 PM · Ends at 10:00 PM</div>
+        <div class="invite-detail"><span class="invite-icon">📍</span> 1956 W 48th Street, Los Angeles</div>
+        <div class="invite-detail"><span class="invite-icon">👟</span> Shoes off at the door</div>
+        <div class="invite-detail"><span class="invite-icon">✨</span> Come as you are</div>
+        <div class="invite-divider"></div>
+        <div class="invite-guestlist">Your name will be on the guest list.<br>No ticket needed — just show up.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2102,7 +2258,20 @@ p strong { color: var(--cream); }
     <div class="modal-success" id="guestSuccess-sunday">
       <div class="modal-success-icon">🖤</div>
       <h3>Guest submitted.</h3>
-      <p>We've got your person. See you Sunday. 🏡</p>
+      <p>Screenshot the invitation below and send it to your guest.</p>
+      <div class="invite-card">
+        <div class="invite-oh">Our House on 48th</div>
+        <div class="invite-presents">cordially invites you to</div>
+        <div class="invite-title">Our Quiet<br>House Party</div>
+        <div class="invite-date">Sunday, June 21st</div>
+        <div class="invite-divider"></div>
+        <div class="invite-detail"><span class="invite-icon">🕕</span> 1:00 PM – 7:00 PM</div>
+        <div class="invite-detail"><span class="invite-icon">📍</span> 1956 W 48th Street, Los Angeles</div>
+        <div class="invite-detail"><span class="invite-icon">👟</span> Shoes off at the door</div>
+        <div class="invite-detail"><span class="invite-icon">✨</span> Come as you are</div>
+        <div class="invite-divider"></div>
+        <div class="invite-guestlist">Your name will be on the guest list.<br>No ticket needed — just show up.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -2130,6 +2299,16 @@ function openGuestModal(event) {
 
 function closeGuestModal(event) {
   document.getElementById('guestModal-' + event).classList.remove('open');
+  // Reset after close animation
+  setTimeout(() => {
+    const form = document.getElementById('guestForm-' + event);
+    const success = document.getElementById('guestSuccess-' + event);
+    if (form) form.style.display = 'block';
+    if (success) success.classList.remove('show');
+    const collabInput = document.getElementById(event + '-collab');
+    if (collabInput) { collabInput.value = ''; collabInput.style.borderColor = ''; }
+    document.querySelectorAll('.' + event + '-guest').forEach(inp => { inp.value = ''; inp.style.borderColor = ''; });
+  }, 400);
 }
 
 // Close on overlay click
@@ -2191,21 +2370,9 @@ async function submitGuestList(event) {
     console.error('Webhook error:', err);
   }
 
-  // Show success
+  // Show success — stays open until user hits X
   document.getElementById('guestForm-' + event).style.display = 'none';
   document.getElementById('guestSuccess-' + event).classList.add('show');
-
-  // Auto-close and reset after 3.5s
-  setTimeout(() => {
-    closeGuestModal(event);
-    setTimeout(() => {
-      document.getElementById('guestForm-' + event).style.display = 'block';
-      document.getElementById('guestSuccess-' + event).classList.remove('show');
-      collabInput.value = '';
-      collabInput.style.borderColor = '';
-      guestInputs.forEach(inp => { inp.value = ''; inp.style.borderColor = ''; });
-    }, 400);
-  }, 3500);
 }
 
 // ── RSVP MODAL (I'm Coming) ──
